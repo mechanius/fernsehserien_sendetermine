@@ -19,9 +19,10 @@ def scrape_table(root):
             sendetermin['titel'] = table_cells[6].text_content()
             sendetermin['episodeguideurl'] = row.attrib['data-href']
             # Print out the data we've gathered
-            print sendetermin , '------------'
+            #print sendetermin , '------------'
             # Finally, save the record to the datastore - 'Artist' is our unique key
-            scraperwiki.datastore.save(['datum','sender','start'], sendetermin)
+            #scraperwiki.datastore.save(['datum','sender','start'], sendetermin)
+            scraperwiki.sqlite.save(['datum','sender','start'], sendetermin)
         
 # scrape_and_look_for_next_link function: calls the scrape_table
 # function, then hunts for a 'next' link: if one is found, calls itself again

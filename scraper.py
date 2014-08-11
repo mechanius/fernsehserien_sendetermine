@@ -27,7 +27,7 @@ def scrape_table(root):
 # function, then hunts for a 'next' link: if one is found, calls itself again
 def scrape_and_look_for_next_link(url):
     html = scraperwiki.scrape(url)
-    print html
+    #print html
     root = lxml.html.fromstring(html)
     scrape_table(root)
     next_link = next_link = root.xpath('//a[starts-with(text(), "weiter")]')

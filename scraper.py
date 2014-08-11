@@ -31,7 +31,7 @@ def scrape_and_look_for_next_link(url):
     #print html
     root = lxml.html.fromstring(html)
     scrape_table(root)
-    next_link = next_link = root.xpath('//a[starts-with(text(), "weiter")]')
+    next_link = next_link = root.xpath('//a[starts-with(text(), "zurück")]')
     print next_link
     if next_link:
         next_url = urlparse.urljoin(base_url, next_link[0].attrib.get('href'))

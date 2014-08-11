@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 import scraperwiki
 import urlparse
 import lxml.html
